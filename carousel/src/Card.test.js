@@ -9,6 +9,13 @@ it("renders without crashing", function () {
 });
 // end
 
+it("matches snapshot", function () {
+  const { container } =
+    render(<Card caption="test" src="test1" currNum="1" totalNum="1" />);
+  expect(container).toMatchSnapshot();
+});
+// end
+
 it("has the correct alt text & src", function () {
   const { container, debug } =
     render(<Card caption="test" src="test1" currNum="1" totalNum="1" />);
@@ -21,9 +28,3 @@ it("has the correct alt text & src", function () {
 });
 // end
 
-it("matches snapshot", function () {
-  const { container } =
-    render(<Card caption="test" src="test1" currNum="1" totalNum="1" />);
-  expect(container).toMatchSnapshot();
-});
-// end

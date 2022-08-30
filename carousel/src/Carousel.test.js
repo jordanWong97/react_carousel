@@ -102,7 +102,9 @@ it("right arrow disappears on last img", function () {
     />
   );
   // expect left arrow to be in document, not right
-
+  // too many imgs
+  //mock currcardindex
+  //fireevent.click in forloop or manipulate image start
   const rightArrow = container.querySelector(".bi-arrow-right-circle");
   fireEvent.click(rightArrow);
   fireEvent.click(rightArrow);
